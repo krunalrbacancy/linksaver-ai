@@ -29,3 +29,10 @@ Architecture
 Styling
 
 Use Tailwind CSS only.
+
+Database rules
+
+* Always create a seed.sql file for development data.
+* Seed files should insert 5-10 realistic records.
+* Use auth.uid() when inserting user-related data instead of hardcoding user IDs.
+* Never require the frontend to manually send user_id.

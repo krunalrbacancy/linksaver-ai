@@ -54,7 +54,17 @@ In your Supabase project:
 - Ensure `Email` provider is enabled
 - Use email/password signups
 
-## 5. Run the project locally
+## 5. Seed development data
+
+Create at least one user first by signing up in the app or from the Supabase dashboard. Then open the Supabase SQL Editor and run the SQL from [supabase/seed.sql](/home/bacancy/Krunal/Codex/linksaver-ai/supabase/seed.sql).
+
+The seed script:
+
+- inserts 6 realistic development links
+- uses `auth.uid()` for `user_id`
+- works with RLS enabled by setting the JWT subject to an existing auth user before the insert
+
+## 6. Run the project locally
 
 ```bash
 npm run dev
