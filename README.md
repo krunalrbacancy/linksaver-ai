@@ -79,6 +79,35 @@ npm run lint
 npm run build
 ```
 
+## 7. Deploy on Vercel
+
+1. Push this project to a Git repository.
+2. Import the repository into Vercel.
+3. In the Vercel project settings, add these environment variables:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+4. Deploy the project.
+5. After deployment, copy your Vercel production URL.
+6. In Supabase, go to `Authentication` -> `URL Configuration` and add:
+
+- `Site URL`: `https://linksaver-ai-six.vercel.app`
+- `Redirect URLs`: `https://linksaver-ai-six.vercel.app` and preview URLs if you use them
+
+Example:
+
+```text
+https://linksaver-ai-six.vercel.app
+https://your-app-name-git-branch-your-team.vercel.app
+```
+
+7. Redeploy from Vercel if you changed environment variables after the first deployment.
+
+Vercel will automatically run the Next.js build command during deployment.
+
 ## Project structure
 
 ```text
